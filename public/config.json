@@ -1,0 +1,106 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+       "icon": "images/icon.png",
+       "iconSmall": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "PinePurge",
+           "description": "Aplicativo personalizado por banco pine"
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [{
+				"CPF" : "{{Contact.key}}"
+            }],
+            "outArguments": [
+                { "status":"String" }
+            ],
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+            "verb": "POST",
+            "body": "{{Contact.key}}",
+            "header": "application/json",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
+       "save": {
+           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+            "verb": "POST",
+            "body": "",
+            "header": "application/json",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "validate": {
+		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+            "verb": "POST",
+            "body": "",
+            "header": "application/json",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "publish": {
+		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+			"verb": "POST",
+            "body": "",
+            "header": "application/json",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       },
+       "stop": {
+			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+			"verb": "POST",
+            "body": "",
+            "header": "application/json",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" }
+       
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 200,
+           "width": 350,
+           "fullscreen": false
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
