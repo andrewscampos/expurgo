@@ -21,7 +21,7 @@
                 { "status":"String" }
             ],
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
-            "verb": "PUT",
+            "verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
-           "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
             "verb": "POST",
             "body": "",
             "header": "application/json",
@@ -41,7 +41,7 @@
             "timeout": 10000
        },
        "validate": {
-		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
             "verb": "POST",
             "body": "",
             "header": "application/json",
@@ -50,8 +50,8 @@
             "timeout": 10000
        },
        "publish": {
-		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-            "verb": "POST",
+		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
+			"verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
@@ -59,8 +59,8 @@
             "timeout": 10000
        },
        "stop": {
-        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
-        "verb": "POST",
+			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+			"verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
