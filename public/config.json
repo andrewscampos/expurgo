@@ -32,8 +32,8 @@
     "configurationArguments": {
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
-           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
-            "verb": "OPTIONS",
+           "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
@@ -41,8 +41,8 @@
             "timeout": 10000
        },
        "validate": {
-		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
-            "verb": "OPTIONS",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
@@ -50,8 +50,8 @@
             "timeout": 10000
        },
        "publish": {
-		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
-			"verb": "OPTIONS",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+            "verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
@@ -59,8 +59,8 @@
             "timeout": 10000
        },
        "stop": {
-			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-			"verb": "OPTIONS",
+        "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+        "verb": "POST",
             "body": "",
             "header": "application/json",
             "format": "json",
