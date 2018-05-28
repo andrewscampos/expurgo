@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Custom Journey Builder Activity v1.3</title>
-
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/require.js"></script>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         
         <!-- jQuery library -->
@@ -13,21 +13,7 @@
         
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            function hideTitle(){
-                var type = $('#type').val();
-                if(type == "SMS"){
-                 //   $('#title').hide();
-                   // $('#tituloLabel').hide();
-                    $('#labalParaPush').hide();
-                    
-                }else{
-                 //   $('#title').show();
-                //    $('#tituloLabel').show();
-                    $('#labalParaPush').show();
-                }
-            }
-        </script>
+        
         <script type="text/javascript">
             (function() {
                 var config = {
@@ -89,9 +75,11 @@
     </head>
     <body>
         <div id="step1" class="step form-group">
-            <h1>Atenção!</h1>
+            <h1>Atenção</h1>
             <p>
-                Este item é utilizado para realizar o expurgo da base de dados, caso um cliente chegue ao fim de uma jornada sem criar uma conta.
+                <h4>
+                Este item é utilizado para indicar se um cliente chegou no fim de uma jornada e sem criar uma conta para que ele possa ser expurgado da base de dados!
+                <h4>
             </p>
         </div>
         </div>

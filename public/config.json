@@ -5,25 +5,25 @@
        "iconSmall": "images/iconSmall.png",
        "category": "message"
     },
+    "ENVIRONMENT": "",
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PinePurge",
+           "name": "PinePurge {{ENVIRONMENT}}",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
+    "urlBase":"https://afpnhhgtw01.pine.com:8443",
     "arguments": {
         "execute": {
-            "inArguments": [{
-				"CPF" : "{{Contact.key}}"
-            }],
+            "cpf": "{{Contact.key}}",
             "outArguments": [
                 { "status":"String" }
             ],
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge",
-            "verb": "POST",
+            "url":  "{{urlBase}}/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "verb": "PUT",
             "body": "",
-            "header": "application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
@@ -32,37 +32,37 @@
     "configurationArguments": {
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
-           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+           "url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
-            "header": "application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
        "validate": {
-		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+		"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
-            "header": "application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
        "publish": {
-		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-			"verb": "POST",
+		"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
-            "header": "application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
        "stop": {
-			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-			"verb": "POST",
+			"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
-            "header": "application/json",
+            "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000

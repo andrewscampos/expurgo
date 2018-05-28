@@ -13,37 +13,14 @@ define(function (require) {
 	$(window).ready(function () {
 		connection.trigger('ready');
 	});
-
 	function initialize (data) {
         if (data) {
             payload = data;
-        }
-        var message = '';
-        var title = '';
-
-        var hasInArguments = Boolean(
-            payload['arguments'] &&
-            payload['arguments'].execute &&
-            payload['arguments'].execute.inArguments &&
-            payload['arguments'].execute.inArguments.length > 0
-        );
-
-        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-        if (inArguments[0].message ) {
-            $('#type').val(inArguments[0].type);
-            $('#title').val(inArguments[0].title);
-			$('#message').val(inArguments[0].message);
-			$('#categoria').val(inArguments[0].categoria);
-        }
+		}
+		payload['arguments'].urlBase =  process.env.GATEWAY;
     }
-
 	function onClickedNext () {
-		save();/*
-		if (currentStep.key === 'eventdefinitionkey') {
-		} else {
-			connection.trigger('nextStep');
-		}*/
+		save();
 	}
 
 	function onClickedBack () {
@@ -71,7 +48,7 @@ define(function (require) {
 
 	function save () {
 		payload['metaData'].isConfigured = true;
-
+		console.log(payload['arguments'].execute.cpf)
 		connection.trigger('updateActivity', payload);
 	}
 
