@@ -20,7 +20,7 @@
                 { "status":"String" }
             ],
             "url":  "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
-            "verb": "PUT",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
