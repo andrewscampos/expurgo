@@ -16,6 +16,16 @@
     "urlBase":"https://afpnhhgtw01.pine.com:8443",
     "arguments": {
         "execute": {
+            "inArguments": [{
+                "email": "{{InteractionDefaults.Email}}",
+                "type": "",
+                "title": "",
+                "message": "",
+                "categoria":"",
+                "rastreamento":"",
+                "shortMessage":"",
+                "customerId" : "{{Contact.key}}"
+            }],
             "outArguments": [
                 { "status":"String" }
             ],
@@ -81,6 +91,15 @@
     "schema": {
         "arguments": {
             "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
                 "outArguments": [
                     {
                         "foundSignupDate": {
