@@ -9,7 +9,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PinePurge {{ENVIRONMENT}}",
+           "name": "PinePurge",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
