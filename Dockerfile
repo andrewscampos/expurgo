@@ -1,7 +1,7 @@
 FROM node:latest
 ENV NPM_ENVIRONMENT build
 WORKDIR /app
-EXPOSE 8001/tcp
+EXPOSE 8010/tcp
 COPY . /app
 RUN chmod -R a+rwx /app
 RUN chmod +x /app/Environment.sh

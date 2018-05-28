@@ -1,9 +1,21 @@
-(function (root, factory) {
+/*
+ * Postmonger.js   version 0.0.14
+ * https://github.com/kevinparkerson/postmonger
+ *
+ * Copyright (c) 2012-2014 Kevin Parkerson
+ * Available via the MIT or new BSD license.
+ * Further details and documentation:
+ * http://kevinparkerson.github.com/postmonger/
+ *
+ *///
+
+ (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		define('postmonger', [], function () { return factory(root); });
 	} else if (typeof exports === 'object') {
 		module.exports = factory(root);
 	} else {
+		// OR use browser globals if AMD is not present
 		root.Postmonger = factory(root);
 	}
 }(this, function (root) {
