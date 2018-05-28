@@ -16,8 +16,7 @@ define(function (require) {
 	function initialize (data) {
         if (data) {
             payload = data;
-		}
-		//payload['arguments'].urlBase =  process.env.GATEWAY;
+        }
     }
 	function onClickedNext () {
 		save();
@@ -42,6 +41,7 @@ define(function (require) {
 		switch 	(currentStep.key) {
 		case 'eventdefinitionkey':
 			$('#step1').show();
+			$('#step1 input').focus();
 			break;
 		}
 	}
