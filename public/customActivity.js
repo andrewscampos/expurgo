@@ -48,7 +48,6 @@ define(function (require) {
 
 	function save () {
 		payload['metaData'].isConfigured = true;
-		console.log(payload['arguments'].execute.cpf)
 		connection.trigger('updateActivity', payload);
 	}
 

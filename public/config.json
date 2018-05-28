@@ -16,7 +16,6 @@
     "urlBase":"https://afpnhhgtw01.pine.com:8443",
     "arguments": {
         "execute": {
-            "cpf": "{{Contact.key}}",
             "inArguments": [{
                 "email": "{{InteractionDefaults.Email}}",
                 "type": "",
