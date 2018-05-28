@@ -43,7 +43,7 @@
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -51,8 +51,8 @@
             "timeout": 10000
        },
        "validate": {
-    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -60,8 +60,8 @@
             "timeout": 10000
        },
        "publish": {
-    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -70,7 +70,7 @@
        },
        "stop": {
       "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
