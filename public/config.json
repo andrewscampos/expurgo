@@ -17,6 +17,16 @@
     "arguments": {
         "execute": {
             "cpf": "{{Contact.key}}",
+            "inArguments": [{
+                "email": "{{InteractionDefaults.Email}}",
+                "type": "",
+                "title": "",
+                "message": "",
+                "categoria":"",
+                "rastreamento":"",
+                "shortMessage":"",
+            "customerId" : "{{Contact.key}}"
+            }],
             "outArguments": [
                 { "status":"String" }
             ],
