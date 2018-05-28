@@ -22,7 +22,7 @@ app.use(require('body-parser').raw({
 }));
 
 // Route that is called for every contact who reaches the custom split activity
-app.put('/activity/execute', (req, res) => {
+app.post('/activity/execute', (req, res) => {
 	verifyJwt(req.body, Pkg.options.salesforce.marketingCloud.jwtSecret, (err, decoded) => {
 		// verification error -> unauthorized request
 		if (err) {
@@ -61,16 +61,6 @@ app.put('/activity/execute', (req, res) => {
 // Routes for saving, publishing and validating the custom activity. In this case
 // nothing is done except decoding the jwt and replying with a success message.
 app.post(/\/activity\/(save|publish|validate)/, (req, res) => {
-	verifyJwt(req.body, Pkg.options.salesforce.marketingCloud.jwtSecret, (err, decoded) => {
-		// verification error -> unauthorized request
-		if (err)	return res.status(401).end();
-
-		return res.status(200).json({success: true});
-	});
-});
-
-
-app.get(/\/activity\/(save|publish|validate)/, (req, res) => {
 	verifyJwt(req.body, Pkg.options.salesforce.marketingCloud.jwtSecret, (err, decoded) => {
 		// verification error -> unauthorized request
 		if (err)	return res.status(401).end();

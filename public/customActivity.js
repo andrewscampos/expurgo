@@ -47,7 +47,6 @@ define(function (require) {
 	}
 
 	function save () {
-		console.log('save')
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
 	}

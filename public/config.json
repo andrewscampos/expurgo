@@ -32,7 +32,7 @@
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -41,7 +41,7 @@
        },
        "validate": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -50,7 +50,7 @@
        },
        "publish": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -59,7 +59,7 @@
        },
        "stop": {
       "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -81,15 +81,6 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                    {
-                        "emailAddress": {
-                            "dataType": "Email",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    }
-                ],
                 "outArguments": [
                     {
                         "foundSignupDate": {
