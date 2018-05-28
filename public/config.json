@@ -20,7 +20,7 @@
             "outArguments": [
                 { "status":"String" }
             ],
-            "url":  "{{urlBase}}/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "url":  "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
             "verb": "PUT",
             "body": "",
             "header": "",
@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
        "save": {
-           "url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "GET",
             "body": "",
             "header": "",
@@ -41,7 +41,7 @@
             "timeout": 10000
        },
        "validate": {
-		"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+    "url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
             "verb": "GET",
             "body": "",
             "header": "",
@@ -50,7 +50,7 @@
             "timeout": 10000
        },
        "publish": {
-		"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "GET",
             "body": "",
             "header": "",
@@ -59,7 +59,7 @@
             "timeout": 10000
        },
        "stop": {
-			"url": "{{urlBase}}/api/dev/pineonline/web/customers/status",
+      "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "GET",
             "body": "",
             "header": "",
