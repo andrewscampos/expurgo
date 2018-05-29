@@ -4,6 +4,9 @@ const Path = require('path');
 const Pkg = require(Path.join(__dirname, '..', 'package.json'));
 const express = require('express');
 
+console.log('GATEWAY', process.env.GATEWAY);
+console.log('ENVIRONMENT', process.env.ENVIRONMENT);
+
 // Helper utility for verifying and decoding the jwt sent from Salesforce Marketing Cloud.
 const verifyJwt = require(Path.join(__dirname, 'lib', 'jwt.js'));
 // Helper class that handles all the interactions with Salesforce Service Cloud

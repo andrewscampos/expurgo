@@ -1,87 +1,87 @@
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <title>Custom Journey Builder Activity v1.3</title>
-            <script type="text/javascript" src="js/jquery.min.js"></script>
-            <script type="text/javascript" src="js/require.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Journey Builder Activity v1.3</title>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/require.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript">
+            (function() {
+                var config = {
+                    baseUrl: ''
+                };
+
+                var dependencies = [
+                    'customActivity'
+                ];
+
+                require(config, dependencies);
+            })();
+        </script>
+
+        <style type="text/css">
+        body {
+            padding: 15px;
+            margin: 0;
+            font-size: 11px;
+            color: #16325c;
+            font-family: "Salesforce Sans", Arial, sans-serif;
+        }
+
+        .step {
+            display: none;
+        }
+
+        #step1 {
+            display: block;
+        }
+
+        input {
+            font-family: inherit;
+            display: block;
+            padding: 4px 5px;
+            font-size: 11px;
+            color: #16325c;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        input[type=text] {
             
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            
-            <!-- jQuery library -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            
-            <!-- Latest compiled JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            
-            <script type="text/javascript">
-                (function() {
-                    var config = {
-                        baseUrl: ''
-                    };
+            margin-bottom: 10px;
+        }
 
-                    var dependencies = [
-                        'customActivity'
-                    ];
+        .inputLabel {
+            margin-bottom: 5px;
+            font-size: 8pt;
+            color: #808080;
+            text-transform: uppercase;
+        }
+    </style>
 
-                    require(config, dependencies);
-                })();
-            </script>
-
-            <style type="text/css">
-            body {
-                padding: 15px;
-                margin: 0;
-                font-size: 11px;
-                color: #16325c;
-                font-family: "Salesforce Sans", Arial, sans-serif;
-            }
-
-            .step {
-                display: none;
-            }
-
-            #step1 {
-                display: block;
-            }
-
-            input {
-                font-family: inherit;
-                display: block;
-                padding: 4px 5px;
-                font-size: 11px;
-                color: #16325c;
-                background-color: #ffffff;
-                background-image: none;
-                border: 1px solid #d8dde6;
-                border-radius: 0.25rem;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-            }
-
-            input[type=text] {
-                
-                margin-bottom: 10px;
-            }
-
-            .inputLabel {
-                margin-bottom: 5px;
-                font-size: 8pt;
-                color: #808080;
-                text-transform: uppercase;
-            }
-        </style>
-
-        </head>
-        <body>
-            <div id="step1" class="step form-group">
-                <h1>Atenção</h1>
-                <p>
-                    <h5>
-                    Este item é utilizado para indicar se um cliente chegou no fim de uma jornada e sem criar uma conta para que ele possa ser expurgado da base de dados!
-                    <h5>
-                </p>
-            </div>
-            </div>
-        </body>
-    </html>
+    </head>
+    <body>
+        <div id="step1" class="step form-group">
+            <h1>Atenção</h1>
+            <p>
+                <h4>
+                Este item é utilizado para indicar se um cliente chegou no fim de uma jornada e sem criar uma conta para que ele possa ser expurgado da base de dados!
+                <h4>
+            </p>
+        </div>
+        </div>
+    </body>
+</html>
