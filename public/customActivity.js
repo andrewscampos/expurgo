@@ -18,30 +18,14 @@ define(function (require) {
         if (data) {
             payload = data;
         }
-        var message = '';
-        var title = '';
-
-        var hasInArguments = Boolean(
-            payload['arguments'] &&
-            payload['arguments'].execute &&
-            payload['arguments'].execute.inArguments &&
-            payload['arguments'].execute.inArguments.length > 0
-        );
-
-        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-        if (inArguments[0].shortMessage ) {
-            $('#type').val(inArguments[0].type);
-            $('#title').val(inArguments[0].title);
-			$('#message').val(inArguments[0].message);
-			$('#categoria').val(inArguments[0].categoria);
-			$('#shortMessage').val(inArguments[0].shortMessage);
-			$('#rastreamento').val(inArguments[0].rastreamento);
-        }
     }
 
 	function onClickedNext () {
-		save();
+		save();/*
+		if (currentStep.key === 'eventdefinitionkey') {
+		} else {
+			connection.trigger('nextStep');
+		}*/
 	}
 
 	function onClickedBack () {
@@ -57,7 +41,11 @@ define(function (require) {
 		if (stepIndex && !step) {
 			step = steps[stepIndex - 1];
 		}
+
 		currentStep = step;
+
+	//	$('.step').hide();
+
 		switch 	(currentStep.key) {
 		case 'eventdefinitionkey':
 			$('#step1').show();
@@ -69,18 +57,7 @@ define(function (require) {
 	
 
 	function save () {
-		var name = $('#message').val();
-		
-		payload.name = $('#type').val();
-
-		payload['arguments'].execute.inArguments[0].type = $('#type').val();
-    	payload['arguments'].execute.inArguments[0].title = $('#title').val();
-		payload['arguments'].execute.inArguments[0].message = $('#message').val();
-		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
-		payload['arguments'].execute.inArguments[0].shortMessage = $('#shortMessage').val();
-		payload['arguments'].execute.inArguments[0].rastreamento = $('#rastreamento').val();
 		payload['metaData'].isConfigured = true;
-
 		connection.trigger('updateActivity', payload);
 	}
 
