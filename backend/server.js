@@ -66,6 +66,24 @@ app.post(/\/activity\/(save|publish|validate)/, (req, res) => {
 	});
 });
 
+app.get(/\/activity\/(save|publish|validate)/, (req, res) => {
+	verifyJwt(req.body, Pkg.options.salesforce.marketingCloud.jwtSecret, (err, decoded) => {
+		// verification error -> unauthorized request
+		if (err)	return res.status(401).end();
+
+		return res.status(200).json({success: true});
+	});
+});
+
+app.put(/\/activity\/(save)/, (req, res) => {
+	verifyJwt(req.body, Pkg.options.salesforce.marketingCloud.jwtSecret, (err, decoded) => {
+		// verification error -> unauthorized request
+		if (err)	return res.status(401).end();
+
+		return res.status(200).json({success: true});
+	});
+});
+
 // Serve the custom activity's interface, config, etc.
 app.use(express.static(Path.join(__dirname, '..', 'public')));
 
