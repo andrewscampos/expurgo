@@ -9,7 +9,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PinePurge",
+           "name": "Pine Expurgo",
            "description": "Aplicativo personalizado por banco pine"
        }
     },
@@ -19,13 +19,7 @@
             "cpf": "{{Contact.key}}",
             "inArguments": [{
                 "email": "{{InteractionDefaults.Email}}",
-                "type": "",
-                "title": "",
-                "message": "",
-                "categoria":"",
-                "rastreamento":"",
-                "shortMessage":"",
-            "customerId" : "{{Contact.key}}"
+                "customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
@@ -51,7 +45,7 @@
             "timeout": 10000
        },
        "validate": {
-    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -60,7 +54,7 @@
             "timeout": 10000
        },
        "publish": {
-    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -69,7 +63,7 @@
             "timeout": 10000
        },
        "stop": {
-      "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -85,7 +79,7 @@
     "userInterfaces": {
        "configModal": {
            "height": 200,
-           "width": 350,
+           "width": 450,
            "fullscreen": false
        }
     },

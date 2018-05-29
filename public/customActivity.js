@@ -17,7 +17,7 @@ define(function (require) {
         if (data) {
             payload = data;
 		}
-		payload['arguments'].urlBase =  process.env.GATEWAY;
+		//payload['arguments'].urlBase =  process.env.GATEWAY;
     }
 	function onClickedNext () {
 		save();
