@@ -27,7 +27,7 @@
             "outArguments": [
                 { "status":"String" }
             ],
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "url": "https://gateway.pine.com/api/prd/pineonline/web/customers/purge/{{Contact.key}}",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -39,7 +39,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
-        "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/save",
+        "url": "https://gateway.pine.com/api/prd/pineonline/web/customers/save",
         "verb": "POST",
             "body": "",
             "header": "",
@@ -48,7 +48,7 @@
             "timeout": 10000
        },
        "validate": {
-        "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/validate",
+        "url": "https://gateway.pine.com/api/prd/pineonline/web/customers/validate",
         "verb": "POST",
             "body": "",
             "header": "",
@@ -57,7 +57,7 @@
             "timeout": 10000
        },
        "publish": {
-        "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/publish",
+        "url": "https://gateway.pine.com/api/prd/pineonline/web/customers/publish",
         "verb": "POST",
             "body": "",
             "header": "",
@@ -66,7 +66,7 @@
             "timeout": 10000
        },
        "stop": {
-        "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/stop",
+        "url": "https://gateway.pine.com/api/prd/pineonline/web/customers/stop",
         "verb": "POST",
             "body": "",
             "header": "",
