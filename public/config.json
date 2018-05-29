@@ -15,9 +15,9 @@
     "arguments": {
         "execute": {
             "inArguments": [{
-				"email": "{{InteractionDefaults.Email}}",
-				"type": "",
-				"title": "",
+        				"email": "{{InteractionDefaults.Email}}",
+        				"type": "",
+        				"title": "",
                 "message": "",
                 "categoria":"",
                 "rastreamento":"",
@@ -40,7 +40,7 @@
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
         "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-        "verb": "POST",
+        "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -49,7 +49,7 @@
        },
        "validate": {
         "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-        "verb": "POST",
+        "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -58,7 +58,7 @@
        },
        "publish": {
         "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-        "verb": "POST",
+        "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -67,7 +67,7 @@
        },
        "stop": {
         "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-        "verb": "POST",
+        "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
