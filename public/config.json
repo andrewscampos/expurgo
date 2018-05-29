@@ -1,5 +1,5 @@
 {
-    "workflowApiVersion": "1.0",
+    "workflowApiVersion": "2.0",
     "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
@@ -9,7 +9,7 @@
     "lang": {
        "en-US": {
            "name": "PinePurge",
-           "description": "Aplicativo personalizado por Banco Pine para Expurgo de cliente"
+           "description": "Aplicativo personalizado por Banco Pine"
        }
     },
     "arguments": {
@@ -27,7 +27,7 @@
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
            "save": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -36,7 +36,7 @@
        },
        "validate": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -45,7 +45,7 @@
        },
        "publish": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -54,7 +54,7 @@
        },
        "stop": {
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "GET",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -74,5 +74,27 @@
        }
     },
     "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
     }
 }
