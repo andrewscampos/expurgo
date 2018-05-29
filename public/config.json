@@ -8,16 +8,16 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PineConnect",
+           "name": "PinePurge",
            "description": "Aplicativo personalizado por Banco Pine"
        }
     },
     "arguments": {
         "execute": {
             "inArguments": [{
-        				"email": "{{InteractionDefaults.Email}}",
-        				"type": "",
-        				"title": "",
+                "email": "{{InteractionDefaults.Email}}",
+                "type": "",
+                "title": "",
                 "message": "",
                 "categoria":"",
                 "rastreamento":"",
