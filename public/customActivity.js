@@ -64,8 +64,6 @@ define(function (require) {
 
 		currentStep = step;
 
-	//	$('.step').hide();
-
 		switch 	(currentStep.key) {
 		case 'eventdefinitionkey':
 			$('#step1').show();
