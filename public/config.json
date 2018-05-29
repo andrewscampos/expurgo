@@ -1,5 +1,5 @@
 {
-    "workflowApiVersion": "2.0",
+    "workflowApiVersion": "1.0",
     "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
@@ -9,24 +9,11 @@
     "lang": {
        "en-US": {
            "name": "PinePurge",
-           "description": "Aplicativo personalizado por Banco Pine"
+           "description": "Aplicativo personalizado por Banco Pine para Expurgo de cliente"
        }
     },
     "arguments": {
         "execute": {
-            "inArguments": [{
-                "email": "{{InteractionDefaults.Email}}",
-                "type": "",
-                "title": "",
-                "message": "",
-                "categoria":"",
-                "rastreamento":"",
-                "shortMessage":"",
-		        "customerId" : "{{Contact.key}}"
-            }],
-            "outArguments": [
-                { "status":"String" }
-            ],
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
             "verb": "POST",
             "body": "",
@@ -87,27 +74,5 @@
        }
     },
     "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [
-                    {
-                        "emailAddress": {
-                            "dataType": "Email",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    }
-                ],
-                "outArguments": [
-                    {
-                        "foundSignupDate": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
-                        }
-                    }
-                ]
-            }
-        }
     }
 }
