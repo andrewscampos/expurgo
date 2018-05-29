@@ -1,30 +1,33 @@
 {
-    "workflowApiVersion": "1.0",
+    "workflowApiVersion": "2.0",
     "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
        "category": "message"
     },
-    "ENVIRONMENT": "",
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Pine Expurgo",
-           "description": "Aplicativo personalizado por banco pine"
+           "name": "PineConnect",
+           "description": "Aplicativo personalizado por Banco Pine"
        }
     },
-    "urlBase":"https://afpnhhgtw01.pine.com:8443",
     "arguments": {
         "execute": {
-            "cpf": "{{Contact.key}}",
             "inArguments": [{
-                "email": "{{InteractionDefaults.Email}}",
-                "customerId" : "{{Contact.key}}"
+				        "email": "{{InteractionDefaults.Email}}",
+        				"type": "",
+        				"title": "",
+                "message": "",
+                "categoria":"",
+                "rastreamento":"",
+                "shortMessage":"",
+		            "customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
             ],
-            "url":  "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -34,10 +37,10 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "0c466caf-853b-4713-8c2d-e7ca2942b2ea",
+      "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
-           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+        "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+        "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -45,8 +48,8 @@
             "timeout": 10000
        },
        "validate": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+        "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+        "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -54,8 +57,8 @@
             "timeout": 10000
        },
        "publish": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+        "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+        "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -63,8 +66,8 @@
             "timeout": 10000
        },
        "stop": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
-            "verb": "POST",
+        "url": "https://gateway.pineonline.com.br/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
+        "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -78,8 +81,8 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 200,
-           "width": 450,
+           "height": 550,
+           "width": 570,
            "fullscreen": false
        }
     },
