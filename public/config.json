@@ -15,7 +15,14 @@
     "arguments": {
         "execute": {
             "inArguments": [{
-		        "customerId" : "{{Contact.key}}"
+				"email": "{{InteractionDefaults.Email}}",
+				"type": "",
+				"title": "",
+                "message": "",
+                "categoria":"",
+                "rastreamento":"",
+                "shortMessage":"",
+				"customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
@@ -31,9 +38,9 @@
     },
     "configurationArguments": {
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
-           "save": {
-            "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "GET",
+       "save": {
+           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -41,8 +48,8 @@
             "timeout": 10000
        },
        "validate": {
-            "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "GET",
+		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -50,8 +57,8 @@
             "timeout": 10000
        },
        "publish": {
-            "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "GET",
+		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -59,8 +66,8 @@
             "timeout": 10000
        },
        "stop": {
-            "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "GET",
+			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -74,8 +81,8 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 200,
-           "width": 400,
+           "height": 500,
+           "width": 600,
            "fullscreen": false
        }
     },
