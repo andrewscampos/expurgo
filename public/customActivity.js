@@ -21,11 +21,7 @@ define(function (require) {
     }
 
 	function onClickedNext () {
-		save();/*
-		if (currentStep.key === 'eventdefinitionkey') {
-		} else {
-			connection.trigger('nextStep');
-		}*/
+		save();
 	}
 
 	function onClickedBack () {
@@ -41,11 +37,7 @@ define(function (require) {
 		if (stepIndex && !step) {
 			step = steps[stepIndex - 1];
 		}
-
 		currentStep = step;
-
-	//	$('.step').hide();
-
 		switch 	(currentStep.key) {
 		case 'eventdefinitionkey':
 			$('#step1').show();
@@ -54,12 +46,8 @@ define(function (require) {
 		}
 	}
 
-	
-
 	function save () {
-		
 		payload['metaData'].isConfigured = true;
-
 		connection.trigger('updateActivity', payload);
 	}
 
