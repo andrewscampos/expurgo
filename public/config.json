@@ -33,7 +33,7 @@
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
            "save": {
             "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -42,7 +42,7 @@
        },
        "validate": {
             "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -51,7 +51,7 @@
        },
        "publish": {
             "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
@@ -60,7 +60,7 @@
        },
        "stop": {
             "url": "https://gateway.pine.com/api/prd/pineonline/keyboards",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "header": "",
             "format": "json",
