@@ -21,14 +21,13 @@
                 "message": "",
                 "categoria":"",
                 "rastreamento":"",
-                "token":"f6F1hoLZ9hb629TiEtdTMtDMXiieFCyx",
                 "shortMessage":"",
 		            "customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
             ],
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}/f6F1hoLZ9hb629TiEtdTMtDMXiieFCyx",
             "verb": "POST",
             "body": "",
             "header": "",
