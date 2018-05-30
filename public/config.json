@@ -48,7 +48,7 @@
             "timeout": 10000
        },
        "validate": {
-		"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
             "verb": "POST",
             "body": "",
             "header": "",
