@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "PinePurge",
+           "name": "Pine Purge",
            "description": "Aplicativo personalizado por Banco Pine"
        }
     },
@@ -39,32 +39,35 @@
     "configurationArguments": {
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
-           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/keyboards",
-            "verb": "GET",
+           "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
-       "validate": {"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/keyboards",
-        "verb": "GET",
+       "validate": {
+		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
-       "publish": {"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/keyboards",
-        "verb": "GET",
+       "publish": {
+		    "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
             "useJwt": false,
             "timeout": 10000
        },
-       "stop": {"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/keyboards",
-        "verb": "GET",
+       "stop": {
+			"url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+            "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -78,7 +81,7 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 500,
+           "height": 300,
            "width": 600,
            "fullscreen": false
        }
