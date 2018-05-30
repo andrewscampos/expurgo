@@ -27,11 +27,23 @@ define(function (require) {
 	}
 
 	function onGotoStep (step) {
-	//	showStep(step);
+		showStep(step);
 		connection.trigger('ready');
 	}
 
 	function showStep (step, stepIndex) {
+		if (stepIndex && !step) {
+			step = steps[stepIndex - 1];
+		}
+
+		currentStep = step;
+    
+		switch 	(currentStep.key) {
+		case 'eventdefinitionkey':
+			$('#step1').show();
+			$('#step1 input').focus();
+			break;
+		}
 	}
 
 	function save () {
