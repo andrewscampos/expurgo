@@ -17,7 +17,7 @@ define(function (require) {
         if (data) {
             payload = data;
 		}
-		payload['arguments'].urlBase =  process.env.GATEWAY;
+		// payload['arguments'].urlBase =  process.env.GATEWAY;
     }
 	function onClickedNext () {
 		save();
@@ -48,7 +48,6 @@ define(function (require) {
 
 	function save () {
 		payload['metaData'].isConfigured = true;
-		console.log(payload['arguments'].execute.cpf)
 		connection.trigger('updateActivity', payload);
 	}
 
