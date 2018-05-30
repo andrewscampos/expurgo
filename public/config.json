@@ -15,14 +15,14 @@
     "arguments": {
         "execute": {
             "inArguments": [{
-				        "email": "{{InteractionDefaults.Email}}",
-        				"type": "",
-        				"title": "",
+                "email": "{{InteractionDefaults.Email}}",
+                "type": "",
+                "title": "",
                 "message": "",
                 "categoria":"",
                 "rastreamento":"",
                 "shortMessage":"",
-		            "customerId" : "{{Contact.key}}"
+		        "customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }

@@ -47,6 +47,16 @@ define(function (require) {
 	}
 
 	function save () {
+		var name = $('#message').val();
+		
+		payload.name = $('#type').val();
+
+		payload['arguments'].execute.inArguments[0].type = $('#type').val();
+        payload['arguments'].execute.inArguments[0].title = $('#title').val();
+		payload['arguments'].execute.inArguments[0].message = $('#message').val();
+		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
+		payload['arguments'].execute.inArguments[0].shortMessage = $('#shortMessage').val();
+		payload['arguments'].execute.inArguments[0].rastreamento = $('#rastreamento').val();
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
 	}
