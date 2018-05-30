@@ -89,62 +89,12 @@
     </head>
     <body>
         <div id="step1" class="step form-group">
-            <div>
-                <h4> 
-                    <p id="erroMsg" style="color:red"></p>
-                </h4> 
-            </div>
-			<p>Por favor informe os campos abaixo.</p>
-            <div class="row">
-                <div class="col-xs-4">
-                    <p class="inputLabel">Tipo de Notificação</p>
-                    <select id="type" onchange="hideTitle()" class="form-control">
-                        <option value="PUSH">PUSH</option>
-                        <option value="SMS">SMS</option>
-                    </select>
-                </div>
-                <div class="col-xs-4">
-                    <p class="inputLabel">Tipo de Categoria</p>
-                    <select id="categoria" class="form-control" >
-                        <option value="">Sem categoria</option>
-                        <option value="TRANSFERS">Transferências</option>
-                        <option value="INVESTMENTS">Investimentos</option>
-                        <option value="CASH_OUT">Resgate</option>
-                        <option value="REGISTRATION_DATA">Cadastro</option>
-                        <option value="OFFERS_PROMOTIONS">Ofertas e promoções</option>
-                    </select>
-                </div>
-                <div class="col-xs-4">
-                    <p class="inputLabel" id="tituloLabel">Rastreamento ( opcional )</p>
-                    <input id="title" class="form-control"  placeholder="Rastrear os envios - máx. 100" type="text" minlength="1" maxlength="100" autocomplete="on" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p id="labalParaPush">Push - Prioridade do envio é sempre para push caso esteja desabilitado o cliente recebera um sms.</p>
-                </div>
-            </div>
-            <p class="inputLabel" id="tituloLabel">Titulo ( Obrigatório )</p>
-            <div class="row">
-            <div class="col-md-12">
-                <input id="title" class="form-control"  placeholder="Título que será apresentado na notificação - máx. 20" type="text" required="required" maxlength="20" autocomplete="on" />
-            </div>
-            </div>
-            <p class="inputLabel" id="tituloLabel">Mensagem do Push ( Obrigatório )</p>
-            <div class="row">
-            <div class="col-md-12">
-                <input id="shortMessage" class="form-control"  placeholder="Mensagem que será apresentado na notificação - máx. 140" type="text" required="required" minlength="1" maxlength="140" autocomplete="on" />
-            </div>
-            </div>
-            <p class="inputLabel">Mensagem do detalhe ( opcional )</p>
-            <div class="row">
-                <div class="col-md-12">
-                    <textarea rows="7" id="message" class="form-control" placeholder="Conteúdo da mensagem - máx. 400" type="text" required="required" maxlength="400" autocomplete="on" ></textarea>
-                    <br />
-                    <p>Essa mensagem aparece quando o cliente abre os detalhes do push na tela de notificações</p>
-                </div>
-            </div>
-            <p>* Caso o cliente opte por não receber comunicação com determinada categoria essa notificação não sera enviada!</p>
+            <h1>Atenção</h1>
+            <br />
+            <br />
+            <h5>
+                Este item é utilizado para indicar se um cliente chegou no fim de uma jornada e sem criar uma conta para que ele possa ser expurgado da base de dados!
+            </h5>
         </div>
     </body>
 </html>
