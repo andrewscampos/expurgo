@@ -1,5 +1,5 @@
 {
-    "workflowApiVersion": "2.0",
+    "workflowApiVersion": "1.0",
     "metaData": {
        "icon": "images/icon.png",
        "iconSmall": "images/iconSmall.png",
@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Pine Purge",
-           "description": "Aplicativo personalizado por Banco Pine"
+           "name": "PineConnect",
+           "description": "Aplicativo personalizado por banco pine"
        }
     },
     "arguments": {
@@ -20,14 +20,12 @@
 				"title": "",
                 "message": "",
                 "categoria":"",
-                "rastreamento":"",
-                "shortMessage":"",
 				"customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
                 { "status":"String" }
             ],
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
+            "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/send?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -39,7 +37,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "eaf1a313-ee7f-4277-83ea-b089d62d4f7e",
        "save": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+           "url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -48,7 +46,7 @@
             "timeout": 10000
        },
        "validate": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -57,7 +55,7 @@
             "timeout": 10000
        },
        "publish": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+		"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -66,7 +64,7 @@
             "timeout": 10000
        },
        "stop": {
-            "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/status",
+			"url": "https://pine.dev.gateway.zup.me/salesforce/v1/api/notification/status?gw-app-key=416cf720c6230134b9b4021e75abe44c",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -81,8 +79,8 @@
     ],
     "userInterfaces": {
        "configModal": {
-           "height": 500,
-           "width": 600,
+           "height": 440,
+           "width": 520,
            "fullscreen": false
        }
     },

@@ -30,13 +30,11 @@ define(function (require) {
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        if (inArguments[0].shortMessage ) {
+        if (inArguments[0].message ) {
             $('#type').val(inArguments[0].type);
             $('#title').val(inArguments[0].title);
 			$('#message').val(inArguments[0].message);
 			$('#categoria').val(inArguments[0].categoria);
-			$('#shortMessage').val(inArguments[0].shortMessage);
-			$('#rastreamento').val(inArguments[0].rastreamento);
         }
     }
 
@@ -85,8 +83,6 @@ define(function (require) {
         payload['arguments'].execute.inArguments[0].title = $('#title').val();
 		payload['arguments'].execute.inArguments[0].message = $('#message').val();
 		payload['arguments'].execute.inArguments[0].categoria = $('#categoria').val();
-		payload['arguments'].execute.inArguments[0].shortMessage = $('#shortMessage').val();
-		payload['arguments'].execute.inArguments[0].rastreamento = $('#rastreamento').val();
 		payload['metaData'].isConfigured = true;
 
 		connection.trigger('updateActivity', payload);
