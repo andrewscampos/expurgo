@@ -19,7 +19,8 @@
 				"customerId" : "{{Contact.key}}"
             }],
             "outArguments": [
-                { "status":"String" }
+                { "resultCode":"String" },
+		    {"resultData":"String"}
             ],
             "url": "https://afpnhhgtw01.pine.com:8443/api/dev/pineonline/web/customers/purge/{{Contact.key}}",
             "verb": "POST",
